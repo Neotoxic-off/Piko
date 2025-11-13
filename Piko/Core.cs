@@ -25,18 +25,16 @@ namespace Piko
 
         public async Task Run()
         {
-            // Lancer l'UI dans un thread séparé avec le CancellationToken
-            var uiTask = Task.Run(() => ui.Start(cts.Token));
+            Task uiTask = Task.Run(() => ui.Start(cts.Token));
 
-            // Boucle de gestion des touches dans le thread principal
             while (running)
             {
                 keybindsService.Handle();
                 await Task.Delay(50);
             }
 
-            cts.Cancel(); // Annuler l'UI quand on quitte
-            await uiTask; // Attendre que l'UI se termine proprement
+            cts.Cancel();
+            await uiTask;
         }
 
         private void OnExitHandler()

@@ -9,28 +9,29 @@ namespace Piko
 {
     public static class Constants
     {
-        public static readonly Level[] LEVELS =
+        public static readonly string[] ADJECTIVES = new[]
         {
-            new Level { Id = 1, Experience = 0 },
-            new Level { Id = 2, Experience = 1000 },
-            new Level { Id = 3, Experience = 3000 },
-            new Level { Id = 4, Experience = 6000 },
-            new Level { Id = 5, Experience = 10000 },
-            new Level { Id = 6, Experience = 15000 },
-            new Level { Id = 7, Experience = 21000 },
-            new Level { Id = 8, Experience = 28000 },
-            new Level { Id = 9, Experience = 36000 },
-            new Level { Id = 10, Experience = 45000 },
-            new Level { Id = 11, Experience = 55000 },
-            new Level { Id = 12, Experience = 66000 },
-            new Level { Id = 13, Experience = 78000 },
-            new Level { Id = 14, Experience = 91000 },
-            new Level { Id = 15, Experience = 105000 },
-            new Level { Id = 16, Experience = 120000 },
-            new Level { Id = 17, Experience = 136000 },
-            new Level { Id = 18, Experience = 153000 },
-            new Level { Id = 19, Experience = 171000 },
-            new Level { Id = 20, Experience = 190000 }
+            "agile", "ancient", "angry", "brave", "bright", "calm", "clever", "crazy", "curious", "dancing", "daring",
+            "dark", "dizzy", "eager", "electric", "fancy", "fast", "fearless", "fierce", "friendly", "fuzzy", "gentle",
+            "giant", "glowing", "golden", "graceful", "greedy", "happy", "helpful", "hungry", "icy", "jolly", "joyful",
+            "kind", "lazy", "lonely", "lucky", "magical", "massive", "mighty", "mysterious", "noisy", "noble", "patient",
+            "peaceful", "playful", "powerful", "proud", "quick", "quiet", "rapid", "rare", "restless", "shiny", "sleepy",
+            "sly", "smart", "sneaky", "speedy", "spicy", "stormy", "strong", "stubborn", "sunny", "swift", "tiny",
+            "tricky", "wild", "wise", "wobbly", "young", "zany"
+        };
+
+        public static readonly string[] ANIMALS = new[]
+        {
+            "ant", "bear", "bee", "beetle", "bison", "boar", "buffalo", "butterfly", "camel", "cat", "chameleon",
+            "cheetah", "chicken", "cobra", "cougar", "cow", "crab", "crow", "deer", "dog", "dolphin", "donkey", "dragon",
+            "duck", "eagle", "elephant", "falcon", "ferret", "fish", "flamingo", "fox", "frog", "gazelle", "goat",
+            "goose", "gorilla", "hamster", "hawk", "hedgehog", "hippo", "horse", "hyena", "iguana", "jaguar", "jellyfish",
+            "kangaroo", "koala", "lemur", "leopard", "lion", "lizard", "llama", "lobster", "magpie", "monkey", "moose",
+            "mouse", "narwhal", "octopus", "ostrich", "otter", "owl", "panda", "panther", "parrot", "peacock", "pelican",
+            "penguin", "pig", "pigeon", "polar_bear", "rabbit", "raccoon", "rat", "raven", "rhino", "rooster", "seal",
+            "shark", "sheep", "shrimp", "skunk", "sloth", "snake", "sparrow", "spider", "squid", "swan", "tiger", "toad",
+            "turkey", "turtle", "vulture", "walrus", "weasel", "whale", "wolf", "wombat", "woodpecker", "yak", "zebra",
+            "phoenix", "griffin", "dragonfly", "unicorn"
         };
     }
 }

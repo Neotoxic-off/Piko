@@ -21,15 +21,19 @@ namespace Piko.Services
 
         public void Handle()
         {
-            if (!Console.KeyAvailable)
-                return;
-
-            ConsoleKeyInfo keyInfo = Console.ReadKey(intercept: true);
-            ConsoleKey key = keyInfo.Key;
-
+            ConsoleKeyInfo keyInfo;
+            ConsoleKey key;
             Action action;
-            if (keybinds.TryGetValue(key, out action))
-                action.Invoke();
+
+            if (Console.KeyAvailable)
+            {
+                keyInfo = Console.ReadKey(intercept: true);
+                key = keyInfo.Key;
+
+                if (keybinds.TryGetValue(key, out action))
+                    action.Invoke();                
+            }
+
         }
 
         private void Exit()
