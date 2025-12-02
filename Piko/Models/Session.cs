@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Piko.Services
+namespace Piko.Models
 {
-    public class SettingsService
+    public class Session
     {
-         
+        public Level? Level { get; set; }
     }
 }
