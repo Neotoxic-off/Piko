@@ -1,5 +1,4 @@
-﻿using Spectre.Console;
-using System.Numerics;
+﻿using System;
 using System.Threading.Tasks;
 
 namespace Piko
@@ -8,8 +7,8 @@ namespace Piko
     {
         public static async Task Main(string[] args)
         {
-            Core core = new Core();
-            await core.Run();
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            await new Core().Run();
         }
     }
 }
